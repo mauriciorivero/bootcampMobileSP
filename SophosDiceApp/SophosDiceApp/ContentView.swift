@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
-    
+    //Dice nombre declaration
+    @State var number = 1
     
     var body: some View {
         //This the vertical layout for the app
@@ -19,7 +20,8 @@ struct ContentView: View {
             
             //Button declaration
             Button(action: {
-
+            // Here i change the dice number with random
+                number = Int.random(in: 1...6)
             }){
                 Text("Rol Dice!")
                     .fontWeight(.black)
