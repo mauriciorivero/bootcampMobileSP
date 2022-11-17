@@ -17,6 +17,10 @@ struct ContentView: View {
         VStack {
             //Image declaration
             Image("m-dice_\(number)")
+                .onTapGesture {
+                    //Here i added the functionality of random for the tap gesture on the image
+                    number = Int.random(in: 1...6)
+                }
             
             //Button declaration
             Button(action: {
